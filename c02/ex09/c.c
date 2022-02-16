@@ -39,10 +39,9 @@ char	ft_strlowcase(char *str)
 
 int	main(void)
 {
-	char	str[];
+	char	str[]="hAYat ,qiSa 23Kele23beqler Ucuyo";
 	int		i;
 
-	str[] = "hAYat qiSa 23kele23beqler Ucuyo";
 	i = 0;
 	*str = ft_strlowcase(str);
 	while (i < 32)
