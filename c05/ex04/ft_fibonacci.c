@@ -4,14 +4,16 @@
 int ft_fibonacci(int index)
 {
 	int sum;
-	int sumplus;
-	sum=0;
 	if(index<0)
 		return -1;
-	else if(index>0){
-		sumplus=sum+ft_fibonacci(--index);
-	printf("%d\n",sum);
-	return sumplus;
+	else if(index==1)
+		return 1;
+	else if(index==0)
+		return 0;
+	else if(index>1){
+		sum=ft_fibonacci(index-1)+ft_fibonacci(index-2);
+	
+	return sum;
 	}
 
 }
