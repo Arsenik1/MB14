@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-int    ft_sort_int_tab(char *tab, int size)
+void    ft_sort_int_tab(char *tab, int size)
 {
         int     count;
         int     i;
