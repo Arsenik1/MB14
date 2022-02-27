@@ -6,10 +6,11 @@
 /*   By: skaragol <skaragol@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 19:06:14 by skaragol          #+#    #+#             */
-/*   Updated: 2022/02/16 20:27:52 by skaragol         ###   ########.fr       */
+/*   Updated: 2022/02/27 07:55:59 by skaragol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strlen(char *src)
+
+unsigned int	ft_strlen(char *src)
 {
 	int	i;
 
@@ -23,13 +24,10 @@ int	ft_strlen(char *src)
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
-	int	a;
+	unsigned int	i;
 
 	i = 0;
-	a = ft_strlen(src);
-
-	if(size > a)
+	if (size > a)
 		size = a;
 	while (i + 1 < size && size <= ft_strlen(src))
 	{
@@ -38,5 +36,5 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	if (size > 0)
 		dest[i] = '\0';
-	return (a);
+	return (ft_strlen(src));
 }

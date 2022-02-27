@@ -29,9 +29,13 @@ char *ft_strstr(char *str, char *to_find)
 		{
 			if(str[i]==to_find[j]){
 				a++;
+			}else{
+				i++;
+			break;
 			}
+
 			if(a==ft_strlen(to_find))
-				return &str[i-a];
+				return &str[i-a+1];
 			j++;
 			i++;
 		}
@@ -42,7 +46,7 @@ char *ft_strstr(char *str, char *to_find)
 int main()
 {
 	char ilk[]="ben merhaba bbenim adim salih";
-	char iki[]="merh";
+	char iki[]=("erh");
 
 	char *a=ft_strstr(ilk,iki);
 	printf("%s\n",a);

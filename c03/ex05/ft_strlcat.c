@@ -1,6 +1,6 @@
 unsigned int g_dst_len;
 
-int             ft_strlen(char *str)
+unsigned int             ft_strlen(char *str)
 {
         int             i;
         i = 0;

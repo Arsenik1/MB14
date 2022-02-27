@@ -13,7 +13,7 @@ int             ft_strlen(char *str)
 char	*ft_strncat(char *dest, const char *src, unsigned int nb)
 {
 	int	dest_len;
-	int	i;
+	unsigned int	i;
 
 	dest_len = ft_strlen(dest);
 	i = 0;
@@ -33,7 +33,7 @@ int main()
 {
 	char ilk[]="Hello";
 	char iki[]="Merhaba";
-	//ft_strncat(ilk,iki,4);
+	ft_strncat(ilk,iki,4);
 	//strncat(ilk,iki,4);
 	printf("%s",ilk);
 return 0;

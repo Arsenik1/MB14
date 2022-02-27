@@ -6,11 +6,11 @@
 /*   By: skaragol <skaragol@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 15:16:56 by skaragol          #+#    #+#             */
-/*   Updated: 2022/02/20 15:19:32 by skaragol         ###   ########.fr       */
+/*   Updated: 2022/02/26 16:17:13 by skaragol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_ft(int *********nb)
+void	ft_ultimate_ft(int *********nbr)
 {
-	*********nb = 42;
+	*********nbr = 42;
 }

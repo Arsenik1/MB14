@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skaragol <skaragol@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 00:59:10 by skaragol          #+#    #+#             */
-/*   Updated: 2022/02/26 22:55:09 by skaragol         ###   ########.fr       */
+/*   Created: 2022/02/27 00:41:48 by skaragol          #+#    #+#             */
+/*   Updated: 2022/02/27 04:04:28 by skaragol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	g_sayi[4];
+
+char	*hex(int a)
 {
-	unsigned int	c;
+	int	i;
+	int	rem;
 
-	c = 0;
-	while (c < n)
+	g_sayi[0] = '\\';
+	g_sayi[1] = '0';
+	i = 0;
+	rem = a % 16;
+	if (rem < 10)
+		g_sayi[2] = rem + 48;
+	else if (a < 16)
+		g_sayi[2] = rem + 87;
+	else
 	{
-		if (src[c] != '\0')
-		{
-			dest[c] = src[c];
-		}
+		a = a / 16;
+		g_sayi[1] = '1';
+		if (a < 10)
+			g_sayi[2] = a + 48;
 		else
-		{
-			while (c < n)
-			{
-				dest[c] = '\0';
-				c++;
-			}
-			c = n + 1;
-		}
-		c++;
+			g_sayi[2] = a + 87;
 	}
-	return (dest);
+	return (&g_sayi[0]);
 }

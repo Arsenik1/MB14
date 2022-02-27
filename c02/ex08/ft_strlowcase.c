@@ -1,29 +1,27 @@
-#include <stdio.h>
-char ft_strlowcase(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skaragol <skaragol@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/26 23:36:15 by skaragol          #+#    #+#             */
+/*   Updated: 2022/02/27 07:28:18 by skaragol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_strlowcase(char *str)
 {
-        int i;
-        i=0;
-        while (str[i]!='\0')
-        {
-                if(str[i]<=90 && str[i]>=60)
-                {
-                        str[i]=str[i]+32;
-                }
-                i++;
-        }
-return (*str);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] <= 90 && str[i] >= 65)
+		{
+			str[i] = str[i] + 32;
+		}
+		i++;
+	}
+	return (*str);
 }
-
-
-
-int main(){
-char str[]={'3','E','R','h','a'};
-int i=0;
-*str=ft_strlowcase(str);
-while(i<5){
-printf("%c",str[i]);
-i++;
-}
-return 0;
-}
-

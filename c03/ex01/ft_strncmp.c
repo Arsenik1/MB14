@@ -1,6 +1,6 @@
 int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-        int i;
+        unsigned int i;
         i=0;
         while(s1[i]!='\0'&&s2[i]!='\0'&& i<n )
         {
@@ -13,16 +13,3 @@ int ft_strncmp(char *s1, char *s2, unsigned int n)
 
         return 0;
 }
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-        char ilk[]="Oerhaaba";
-        char iki[]="Oerahaab";
-        int a=ft_strncmp(ilk, iki,8);
-        printf("%d\n",a);
-	a=strncmp(ilk,iki,8);
-	printf("%d\n",a);
-        return 0;
-}
-
