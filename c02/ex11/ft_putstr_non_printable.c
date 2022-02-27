@@ -6,9 +6,10 @@
 /*   By: skaragol <skaragol@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 00:41:48 by skaragol          #+#    #+#             */
-/*   Updated: 2022/02/27 04:04:28 by skaragol         ###   ########.fr       */
+/*   Updated: 2022/02/27 10:21:56 by skaragol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 char	g_sayi[4];
@@ -36,4 +37,24 @@ char	*hex(int a)
 			g_sayi[2] = a + 87;
 	}
 	return (&g_sayi[0]);
+}
+
+void	ft_putstr_non_printable(char *str)
+{
+	int		i;
+	char	*ptr;
+
+	ptr = str;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 32 && str[i] <= 127)
+			write(1, &str[i], 1);
+		else if (str[i] < 32)
+		{
+			ptr = hex(str[i]);
+			write(1, ptr, 3);
+		}
+		i++;
+	}
 }
